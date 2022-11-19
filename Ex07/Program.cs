@@ -12,7 +12,7 @@ namespace Ex07
    cèntims, 1 euro, 2 euros), de tal manera que hi hagi el mínim número de
    monedes. */
 
-            double paga, preu, canvi,cent1,cent2,cent5,cent10,cent20,cent50,euro,euro2,restoEuro,restoEuro2;
+            double paga, preu, canvi, cent1, cent2, cent5, cent10, cent20, cent50, euro, euro2, restoEuro, restoEuro2, resto1 = 0, resto2, resto3;
 
             Console.WriteLine("Preu: ");
             preu = double.Parse(Console.ReadLine());
@@ -20,29 +20,46 @@ namespace Ex07
             paga = double.Parse(Console.ReadLine());
 
 
-            canvi = preu - paga;
+            canvi = paga - preu;
 
-            cent1 = canvi * 100;
-            cent2 = canvi * 50;
-            cent5 = canvi * 20;
-            cent10 = canvi * 10;
-            cent20 = canvi * 5;
-            cent50 = canvi * 2;
-            euro = canvi;
-            restoEuro = canvi * 100 % 100;
-            euro2 = canvi / 2;
-            restoEuro2 = canvi % 2;
 
-            Console.WriteLine(cent1);
-            Console.WriteLine(cent2);
-            Console.WriteLine(cent5);
-            Console.WriteLine(cent10);
-            Console.WriteLine(cent20);
-            Console.WriteLine(cent50);
-            Console.WriteLine(euro);
-            Console.WriteLine(restoEuro);
-            Console.WriteLine(euro2);
-            Console.WriteLine(restoEuro2);
+
+            if (canvi >= 2)
+            {
+
+                euro2 = canvi / 2;
+
+                canvi = canvi%2;
+                Console.WriteLine($"Canvi: {euro2} monedes de 2 euros");
+
+
+
+                if (canvi >= 1)
+                {
+                    euro = canvi / 1;
+                    canvi = canvi - euro;
+                    Console.WriteLine($"Canvi: {euro} monedes de 1 euros");
+                }
+
+                if (canvi >= 0.50)
+                {
+                    cent50 = canvi / 0.50;
+                    canvi = canvi - (canvi % 0.50);
+                    Console.WriteLine($"Canvi: {cent50} monedes de 0.50 euros");
+                }
+
+
+            }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -50,4 +67,5 @@ namespace Ex07
 
         }
     }
+
 }
