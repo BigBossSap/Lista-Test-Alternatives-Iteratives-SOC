@@ -11,23 +11,34 @@ namespace Ex09
    1 + 2 = 3
    1 + 2 + 3 = 6 */
 
+            //Teoria, anar treient els nombres perfectes i colocar els seus divisors  a la suma.
 
-            int acum = 0, i=1,k=0,suma=0;
+            
+            int num1, sumadivisors = 0, i = 1;
 
-            while (i <= num1 / 2)
+            Console.WriteLine("num1: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            while (i <= num1)
             {
                 if (num1 % i == 0)
                     sumadivisors += i;
                 i++;
+                Console.WriteLine(sumadivisors);
 
             }
-            
+
+            if (sumadivisors == num1)
+                Console.WriteLine("Es perfecte");
+            else
+                Console.WriteLine("No es perfecte");
 
 
 
 
 
-            }
+
+
 
 
         }
