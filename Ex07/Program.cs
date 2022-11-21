@@ -27,29 +27,63 @@ namespace Ex07
             if (canvi >= 2)
             {
 
-                euro2 = canvi / 2;
+                euro2 = (int)canvi / 2;
 
-                canvi = canvi%2;
+                canvi = canvi - euro2 * 2;
+                canvi = Math.Round(canvi, 2);
+                Console.WriteLine(canvi);
                 Console.WriteLine($"Canvi: {euro2} monedes de 2 euros");
+            }
 
 
 
                 if (canvi >= 1)
                 {
-                    euro = canvi / 1;
+                    euro = (int)canvi / 1;
                     canvi = canvi - euro;
+                    canvi = Math.Round(canvi, 2);
+                Console.WriteLine(canvi);
                     Console.WriteLine($"Canvi: {euro} monedes de 1 euros");
                 }
 
                 if (canvi >= 0.50)
                 {
                     cent50 = canvi / 0.50;
-                    canvi = canvi - (canvi % 0.50);
-                    Console.WriteLine($"Canvi: {cent50} monedes de 0.50 euros");
+                    canvi =canvi-(cent50-1);
+                canvi = Math.Round(canvi, 2);
+                Console.WriteLine(canvi);
+                    Console.WriteLine($"Canvi: {Convert.ToInt32(cent50)} monedes de 0.50 euros");
                 }
 
-
+                if (canvi>=0.20)
+            {
+                cent20 = canvi / 0.20;
+                canvi = canvi - (cent20-1);
+                canvi = Math.Round(canvi, 2);
+                Console.WriteLine(canvi);
+                Console.WriteLine($"Canvi: {Convert.ToInt32(cent20)} monedes de 0.20 euros");
             }
+
+            if (canvi >= 0.10)
+            {
+                cent10 = canvi / 0.10;
+                canvi = canvi - (canvi -1);
+                canvi = Math.Round(canvi, 2);
+                Console.WriteLine($"Canvi: {Convert.ToInt32(cent10)} monedes de 0.20 euros");
+            }
+
+            if (canvi >= 0.05)
+            {
+                cent5 = canvi / 0.05;
+                canvi = canvi - (canvi - 1);
+                canvi = Math.Round(canvi, 2);
+                Console.WriteLine($"Canvi: {Convert.ToInt32(cent5)} monedes de 0.20 euros");
+            }
+
+
+
+
+
 
 
 
