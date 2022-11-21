@@ -37,12 +37,12 @@ namespace Ex07
 
 
 
-                if (canvi >= 1)
+           if (canvi >= 1)
                 {
                     euro = (int)canvi / 1;
                     canvi = canvi - euro;
                     canvi = Math.Round(canvi, 2);
-                Console.WriteLine(canvi);
+                    Console.WriteLine(canvi);
                     Console.WriteLine($"Canvi: {euro} monedes de 1 euros");
                 }
 
@@ -50,12 +50,12 @@ namespace Ex07
                 {
                     cent50 = canvi / 0.50;
                     canvi =canvi-(cent50-1);
-                canvi = Math.Round(canvi, 2);
-                Console.WriteLine(canvi);
+                    canvi = Math.Round(canvi, 2);
+                    Console.WriteLine(canvi);
                     Console.WriteLine($"Canvi: {Convert.ToInt32(cent50)} monedes de 0.50 euros");
                 }
 
-                if (canvi>=0.20)
+            if (canvi>=0.20)
             {
                 cent20 = canvi / 0.20;
                 canvi = canvi - (cent20-1);
@@ -69,7 +69,7 @@ namespace Ex07
                 cent10 = canvi / 0.10;
                 canvi = canvi - (canvi -1);
                 canvi = Math.Round(canvi, 2);
-                Console.WriteLine($"Canvi: {Convert.ToInt32(cent10)} monedes de 0.20 euros");
+                Console.WriteLine($"Canvi: {Convert.ToInt32(cent10)} monedes de 0.10 euros");
             }
 
             if (canvi >= 0.05)
@@ -77,7 +77,7 @@ namespace Ex07
                 cent5 = canvi / 0.05;
                 canvi = canvi - (canvi - 1);
                 canvi = Math.Round(canvi, 2);
-                Console.WriteLine($"Canvi: {Convert.ToInt32(cent5)} monedes de 0.20 euros");
+                Console.WriteLine($"Canvi: {Convert.ToInt32(cent5)} monedes de 0.05 euros");
             }
 
 
